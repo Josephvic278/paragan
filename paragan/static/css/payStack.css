@@ -1,95 +1,48 @@
 body {
-    max-width: 700px;
-    margin: 0 auto;
-    display: grid;
-    place-items: center;
-    height: 60vh;
-}
 
-.navbar {
+}
+.card_bg{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    overflow: hidden;
-    background-color: #333;
 }
-
-.navbar a {
-    float: left;
-    font-size: 16px;
-    color: white;
+.card_title{
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
 }
-
-.dropdown {
-    float: left;
-    overflow: hidden;
+.card_title h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-.dropdown .dropbtn {
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: white;
-    font-family: inherit;
-    margin: 0;
-}
-
-.navbar a:hover,
-.dropdown:hover .dropbtn {
-    background-color: red;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-
 .card-payment {
     padding: 0.75rem;
     border-radius: 0.5rem;
-    /* 
-shadow-lg */
     margin: 1.5rem auto;
-    width: 75%;
-    height: 40%;
-
+    height: 280px;
+    text-align: center;
+    width: 50%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.card_details{
+    margin-top: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.card_details p{
+    margin-top: 15px;
 }
 
-.btn-payment {
-    background-color: rgb(73, 233, 73);
-    border-width: 1px;
-    border-radius: 0.5rem;
-    padding: 0.75rem 0.5rem;
-    font-weight: bold;
+.btn-payment button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 10px;
+    height: 40px;
+    border: none;
+    width: 50%;
+    border-radius: 9px;
+    font-weight: 600;
+    background: black;
 }
 
+.btn-payment button a{
+    text-decoration: none;color: white;
+}
 footer {
     background-color: black;
     color: white;

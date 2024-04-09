@@ -1,3 +1,4 @@
+{% extends 'base.html' %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -5,50 +6,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block extra_css %}
   <link rel="stylesheet" href="{% static 'css/payStack.css' %}">
+  {% endblock %}
   <title>Payment</title>
 </head>
 
 <body>
-  <nav class="navbar">
-    <div class="logo" style="width: 4rem;">Logo</div>
-    <div class="dropdown">
-      <button class="dropbtn">
-        <svg style="width: 2rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-          <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-          <path
-            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
-        </svg>
-      </button>
-      <div class="dropdown-content">
-        <a href="#">Home</a>
-        <a href="#">Dashboard</a>
-        <a href="#">Investment</a>
-        <a href="#">Logout</a>
-      </div>
-    </div>
-  </nav>
+ {% block content %}
 
-  <div>
+ <div>
+  <div class="card_bg">
     <div class="card-payment">
-      <div style="font-weight: 600;">Make a transfer and confirm</div>
-      <div>
+     <div class="card_title">
+      <h1>Make a transfer and confirm</h1>
+     </div>
+     <div>
+      <div class="card_details">
         <h1>6577296777</h1>
-        <p>MoniePoint</p>
-        <p>Emmanuel Edward</p>
+       <p>MoniePoint</p>
+       <p>Emmanuel Edward</p>
       </div>
-    </div>
-    <button className="btn-payment" onclick="">
-      Confirm
-    </button>
+       
+     </div>
+     <div class="btn-payment">
+        <button className="" onclick="">
+          <a href="mailto:paragonprimeinvestment@gmail.com">confirm</a>
+        </button>
+     </div>
+     
+   </div>
   </div>
-  <footer>
-    <div>
-      <p style="font-weight: bold;">Contact Us:</p>
-      <p>Email: paragonprimeinvestment@gmail.com</p>
-    </div>
-    <p>PPI &copy; 2024</p>
-  </footer>
+
+ </div>
+
+ {% endblock %}
+ {% block footer %}
+    {% endblock %}
 </body>
 
 </html>

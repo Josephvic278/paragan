@@ -30,7 +30,7 @@
                 </div>
                 <Link to="/payment">
                 <button class="invest-btn">
-                    Invest ₦
+                    <a href="{% url 'app:paystack' %}">Invest ₦</a>
                 </button>
                 </Link>
                 <p class="percentage">
@@ -49,7 +49,7 @@
                 </div>
                 <button class="invest-btn">
     
-                    Invest ₦
+                   <a href="{% url 'app:paystack' %}">Invest ₦</a>
                 </button>
                 <p class="percentage">
     
@@ -67,7 +67,7 @@
                 </div>
                 <button class="invest-btn">
     
-                    Invest ₦
+                   <a href="{% url 'app:paystack' %}">Invest ₦</a>
                 </button>
                 <p class="percentage">
     
@@ -85,7 +85,7 @@
                 </div>
                 <button class="invest-btn">
     
-                    Invest ₦
+                   <a href="{% url 'app:paystack' %}">Invest ₦</a>
                 </button>
                 <p class="percentage">
     
@@ -104,7 +104,7 @@
                 <Link to="/payment">
                 <button class="invest-btn">
     
-                    Invest ₦
+                   <a href="{% url 'app:paystack' %}">Invest ₦</a>
                 </button>
                 </Link>
                 <p class="percentage">
@@ -123,7 +123,7 @@
                 </div>
                 <button class="invest-btn">
     
-                    Invest ₦
+                   <a href="{% url 'app:paystack' %}">Invest ₦</a>
                 </button>
                 <p class="percentage">
     
@@ -141,7 +141,7 @@
                 </div>
                 <button class="invest-btn">
     
-                    Invest ₦
+                   <a href="{% url 'app:paystack' %}">Invest ₦</a>
                 </button>
                 <p class="percentage">
     
@@ -159,7 +159,7 @@
                 </div>
                 <button class="invest-btn">
     
-                    Invest ₦
+                   <a href="{% url 'app:paystack' %}">Invest ₦</a>
                 </button>
                 <p class="percentage">
     
@@ -177,7 +177,7 @@
                 </div>
                 <button class="invest-btn">
     
-                    Invest ₦
+                   <a href="{% url 'app:paystack' %}">Invest ₦</a>
                 </button>
                 <p class="percentage">
     
@@ -195,7 +195,7 @@
                 </div>
                 <button class="invest-btn">
     
-                    Invest ₦
+                   <a href="{% url 'app:paystack' %}">Invest ₦</a>
                 </button>
                 <p class="percentage">
     
@@ -213,7 +213,7 @@
                 </div>
                 <button class="invest-btn">
     
-                    Invest ₦
+                   <a href="{% url 'app:paystack' %}">Invest ₦</a>
                 </button>
                 <p class="percentage">
     
@@ -231,7 +231,7 @@
                 </div>
                 <button class="invest-btn">
     
-                    Invest ₦
+                   <a href="{% url 'app:paystack' %}">Invest ₦</a>
                 </button>
                 <p class="percentage">
     
@@ -249,7 +249,7 @@
                 </div>
                 <button class="invest-btn">
     
-                    Invest ₦
+                   <a href="{% url 'app:paystack' %}">Invest ₦</a>
                 </button>
                 <p class="percentage">
     
@@ -258,13 +258,8 @@
             </div>
         </div>
     </div>
-    <footer>
-        <div>
-            <p style="font-weight: bold;">Contact Us:</p>
-            <p>Email: paragonprimeinvestment@gmail.com</p>
-        </div>
-        <p>PPI &copy; 2024</p>
-    </footer>
+    {% endblock %}
+    {% block footer %}
     {% endblock %}
 </body>
 

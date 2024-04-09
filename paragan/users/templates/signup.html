@@ -35,18 +35,22 @@
                     <input type="password" name="password" id="password1" placeholder="Password">
 
                     <input type="password" name="confirm_password" id="password2" placeholder="Confirm Password">
+                    <p id="msg" class="error">
+                        {% for message in messages %}
+                        {{message}}<br>
+                        {% endfor %}
+                    </p>
                 </div>
                 <div class="btn">
                     <button type="submit" value="" onclick="checkform()" id="btnMSG">Sign
                         Up</button>
                 </div>
+                <div class="end_text">
+                    <p>Dont have an accout? Login <a href="{% url 'users:signin' %}">Here</a></p>
+                </div>
             </form>
             <div id="">
-                <p id="msg" class="msg">
-                    {% for message in messages %}
-                    {{message}}<br>
-                    {% endfor %}
-                </p>
+                
             </div>
         </div>
     </div>

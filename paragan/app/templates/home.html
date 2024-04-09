@@ -1,2 +1,27 @@
-<a href="{% url 'users:signup' %}">Sign Up</a><br>
-<a href="{% url 'users:signin' %}">login</a>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paragan</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <div class="top_bar">
+        <div class="logo">
+            <img src="{% static 'img/logo.svg' %}" alt="">
+        </div>
+        <div class="top_links"><a href="{% url 'users:signup' %}">Sign Up</a><p>|</p>
+            <a href="{% url 'users:signin' %}">Login</a></div>
+    </div>
+    <div class="top_sector">
+        <div class="top_sector_text">
+            <h1>Paragan</h1><br><h2>Investment</h2>
+        </div>
+        <div class="top_sector_img">
+            <img src="{% static 'img/top_b.svg' %}" alt="">
+        </div>
+    </div>
+</body>
+</html>

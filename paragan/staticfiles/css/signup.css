@@ -105,5 +105,6 @@ button {
     color: red;
     font-size: 14px;
     font-weight: 200;
+    padding: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

@@ -104,6 +104,7 @@ button {
 .error {
     color: red;
     font-size: 14px;
+    margin-left: 10px;
     font-weight: 200;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

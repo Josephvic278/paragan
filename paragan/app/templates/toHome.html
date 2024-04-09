@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/toHome.css' %}">
+    <title>Home</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo" style="width: 4rem;">Logo</div>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <svg style="width: 2rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                </svg>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Home</a>
+                <a href="#">Dashboard</a>
+                <a href="#">Investment</a>
+                <a href="#">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <div>
+        <div class="home" style="background-image: 'url(${Background})';
+          height: 400px;">
+            <div class="home-container" style="background-color: rgba(0, 0, 0, 0.6);">
+                <div class="home-container-landing">
+                    <div>
+                        <h2 class="home-title" style="color: white;">
+                            Paragon Prime Investment(PPI)
+                        </h2>
+                        <h4 class="home-motto">Trading made easy</h4>
+                        <Link to="/investments">
+                        <button type="button"
+                            class="rounded font-bold border-2 border-neutral-50 px-7 pb-[8px] pt-[10px] text-sm uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                            data-twe-ripple-init data-twe-ripple-color="light">
+                            Invest
+                        </button>
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="background-color: white;">
+            <h1 class="heading">Who we are</h1>
+            <p>
+                Paragon Prime Investment (PPI) is a reliable and secure investment
+                platform designed to enable it’s users invest funds and receive
+                returns by choosing from any of our various investment plans. It
+                launched officially in March, 2024.
+            </p>
+        </div>
+        <div class="card" style="background-color: dodgerblue;color: white;">
+            <h1 class="heading">Why we exist</h1>
+            <p>
+                Paragon Prime Investment comes with greater purpose. We focus on our
+                mission of having a positive impact on society. Here at PPI, we
+                understand that a lot of persons have had unpleasant investment
+                experiences in the past. On this note we were moved to provide a safer
+                and a more feasible form of investment plans. Our platform encourages
+                it’s users to earn through the age long culture of saving.
+            </p>
+        </div>
+        <div class="card" style="background-color: white;">
+            <h1 class="heading">What are our values</h1>
+            <p>
+                So you may ask, what makes us different from other investment
+                platforms? Our values is in our brand name. As Paragons, we serve as a
+                model for others. We believe we are different because we do not try to
+                reel you in with outrageous and unrealistic returns on your
+                investments. Our percentage of returns is fair and reasonable with no
+                additional or hidden charges.
+            </p>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <p style="font-weight: bold;">Contact Us:</p>
+            <p>Email: paragonprimeinvestment@gmail.com</p>
+        </div>
+        <p>PPI &copy; 2024</p>
+    </footer>
+</body>
+
+</html>

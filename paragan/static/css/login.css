@@ -33,7 +33,7 @@ button {
     text-align: center;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 50px;
-    color: rgb(78, 78, 78);
+    color: rgb(72, 92, 228);
 }
 .p_logo_bg{
     justify-content: center;
@@ -44,7 +44,7 @@ button {
     width: 50px;
     height: 50px;
     border-radius: 5px;
-    background: rgb(78, 78, 78);
+    background: rgb(72, 92, 228);
     text-align: center;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     justify-content: center;
@@ -64,7 +64,7 @@ button {
     width: 100%;
     outline: none;
     height: 40px;
-    border-bottom: 2px solid rgba(78, 78, 78, 0.459);
+    border-bottom: 2px solid rgb(169, 172, 187);
 }
 .input_bars input::placeholder{
     margin-bottom: 4px; 
@@ -76,7 +76,7 @@ button {
 }
 .btn button{
     height: 50px;
-    background: rgb(78, 78, 78);
+    background: rgb(72, 92, 228);
     border: none;
     font-size: 14px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -86,7 +86,7 @@ button {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .end_text a{
-    color: rgb(78, 78, 78);
+    color: rgb(72, 92, 228);
 }
 .error{
     color: red;

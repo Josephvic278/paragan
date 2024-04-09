@@ -14,8 +14,9 @@ def dashboard(request):
     user_data = None
     if User.is_authenticated:
         user_data = get_object_or_404(User, id=user_id)
+        user_info = get_object_or_404(UserData, id=user_id)
 
-    return render(request, 'dashboard.html', {'user_data': user_data})
+    return render(request, 'dashboard.html', {'user_data': user_data, 'user_info': user_info})
 
 
 def investment(request):

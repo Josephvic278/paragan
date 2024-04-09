@@ -3,74 +3,25 @@ html {
 }
 
 body {
-    max-width: 700px;
     margin: 0 auto;
-    display: grid;
-    place-items: center;
+   
 }
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-    background-color: #333;
-}
-
-.navbar a {
-    float: left;
-    font-size: 16px;
-    color: white;
+.head_title{
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-.dropdown {
-    float: left;
-    overflow: hidden;
+.con_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
-
-.dropdown .dropbtn {
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: white;
-    font-family: inherit;
-    margin: 0;
-}
-
-.navbar a:hover,
-.dropdown:hover .dropbtn {
-    background-color: red;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
+.container{
+    width: 90%;
+    display: grid;
+    place-content: center;
+    gap: 1rem;
+    grid-template-columns: repeat(4,1fr);
 }
 
 .invest-card {
@@ -78,9 +29,11 @@ body {
     margin: 0.75rem;
     border-radius: .5rem;
     padding: 0.75rem 0;
-    width: 90%;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     height: 150px;
     /* shadow-lg */
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .invest-card-profit {
@@ -132,4 +85,19 @@ footer {
     display: grid;
     place-content: center;
     padding: 1rem 0.75rem;
+}
+@media screen and (max-width: 1224px) {
+    .container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media screen and (max-width: 900px) {
+    .container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 600px) {
+    .container{
+        grid-template-columns: 1fr ;
+    }
 }

@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/app_base.css' %}">
+    {% block extra_css %}
+    {% endblock %}
+</head>
+<body>
+    <div class="top_bar">
+        <div class="nav_bar">
+            <img src="{% static 'img/logo.png' %}" alt="">
+        </div>
+        <div class="top_links">
+            <a href="{% url 'app:dashbaord' %}">Dashboard</a>
+            <a href="{% url 'app:investment' %}">Investments</a>
+            <a href="{% url 'users:logout' %}">Logout</a>
+        </div>
+    </div>
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>

@@ -10,7 +10,7 @@
   {% block extra_css %}
   <link rel="stylesheet" href="{% static 'css/payStack.css' %}">
   {% endblock %}
-  <script src="{% static 'js/payStack.js' %}"></script>
+  <!-- <script src="{% static 'js/payStack.js' %}"></script> -->
 
 </head>
 
@@ -32,8 +32,8 @@
 
         </div>
         <div class="btn-payment">
-          <button id='btn' style="color: white;">
-            Confirm
+          <button id='btn'>
+            <a href="{% url 'app:sendinfo' %}">Confirm</a>
             <!-- <a href="mailto:paragonprimeinvestment@gmail.com">confirm</a> -->
           </button>
         </div>
@@ -46,6 +46,13 @@
   {% endblock %}
   {% block footer %}
   {% endblock %}
+  <script>
+    const btn = document.getElementById("btn");
+
+    btn.addEventListener("click", () => {
+      prompt("What is up?", "I dont know");
+    });
+  </script>
 </body>
 
 </html>

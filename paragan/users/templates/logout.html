@@ -1,5 +1,6 @@
-<form action="" method="POST">
+<form action="" method="POST"
+    style="display: flex;min-height: 100vh;justify-content: center;align-items: center;gap: 5;">
     {% csrf_token %}
-    <button type="submit">Yes</button>
-    <button><a href="{% url 'app:dashbaord' %}">No</a></button>
+    <button type="submit" style="font-size: 2rem;">Yes</button><br>
+    <br><button><a href="{% url 'app:dashbaord' %}" style="font-size: 2rem;text-decoration: none;">No</a></button>
 </form>

@@ -1,31 +1,34 @@
-body {
-
-}
-.card_bg{
+.card_bg {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.card_title{
+
+.card_title {
     text-align: center;
 }
-.card_title h1{
+
+.card_title h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: clamp(.75rem, 4vh, 1.25rem);
 }
+
 .card-payment {
     padding: 0.75rem;
     border-radius: 0.5rem;
     margin: 1.5rem auto;
     height: 280px;
     text-align: center;
-    width: 50%;
+    width: 90%;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-.card_details{
+
+.card_details {
     margin-top: 40px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.card_details p{
+
+.card_details p {
     margin-top: 15px;
 }
 
@@ -40,9 +43,11 @@ body {
     background: black;
 }
 
-.btn-payment button a{
-    text-decoration: none;color: white;
+.btn-payment button a {
+    text-decoration: none;
+    color: white;
 }
+
 footer {
     background-color: black;
     color: white;

@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    {% endblock %}
+</head>
+
+<body>
+    {% block content %}
+    <div class="about">
+        <div class="landing" style=" background-image: url('/paragan/static/img/bg.jpg');
+          height: 350px;">
+            <div class="landing-next" style="background-color: rgba(0, 0, 0, 0.6)">
+                <div class="landing-card">
+                    <div class="text-white">
+                        <h2 style="margin-bottom: 1rem;font-size: 2rem;font-weight: bold;">
+                            Paragon Prime Investment(PPI)
+                        </h2>
+                        <h4 style="margin-bottom: 1.5rem;font-size: .75rem;font-weight:600;font-style: italic">Trading
+                            made easy</h4>
+                        <Link to="/investments">
+                        <button type="button" class="btn">
+                            Invest
+                        </button>
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="background-color: white;">
+            <h1 class="title">Who we are</h1>
+            <p style="padding: 0 0.75rem;">
+                Paragon Prime Investment (PPI) is a reliable and secure investment
+                platform designed to enable it’s users invest funds and receive
+                returns by choosing from any of our various investment plans. It
+                launched officially in March, 2024.
+            </p>
+        </div>
+        <div class="card" style="background-color: dodgerblue;color: white;">
+            <h1 class="title">Why we exist</h1>
+            <p style="padding: 0 0.75rem;">
+                Paragon Prime Investment comes with greater purpose. We focus on our
+                mission of having a positive impact on society. Here at PPI, we
+                understand that a lot of persons have had unpleasant investment
+                experiences in the past. On this note we were moved to provide a safer
+                and a more feasible form of investment plans. Our platform encourages
+                it’s users to earn through the age long culture of saving.
+            </p>
+        </div>
+        <div class="card" style="background-color: white;">
+            <h1 class="title">What are our values</h1>
+            <p style="padding: 0 0.75rem;">
+                So you may ask, what makes us different from other investment
+                platforms? Our values is in our brand name. As Paragons, we serve as a
+                model for others. We believe we are different because we do not try to
+                reel you in with outrageous and unrealistic returns on your
+                investments. Our percentage of returns is fair and reasonable with no
+                additional or hidden charges.
+            </p>
+        </div>
+    </div>
+    {% endblock %}
+    {% block footer %}
+    {% endblock %}
+</body>
+
+</html>

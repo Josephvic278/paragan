@@ -6,43 +6,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment</title>
   {% block extra_css %}
   <link rel="stylesheet" href="{% static 'css/payStack.css' %}">
   {% endblock %}
-  <title>Payment</title>
+  <script src="{% static 'js/payStack.js' %}"></script>
+
 </head>
 
 <body>
- {% block content %}
+  {% block content %}
 
- <div>
-  <div class="card_bg">
-    <div class="card-payment">
-     <div class="card_title">
-      <h1>Make a transfer and confirm</h1>
-     </div>
-     <div>
-      <div class="card_details">
-        <h1>6577296777</h1>
-       <p>MoniePoint</p>
-       <p>Emmanuel Edward</p>
+  <div>
+    <div class="card_bg">
+      <div class="card-payment">
+        <div class="card_title">
+          <h1>Make a transfer and confirm</h1>
+        </div>
+        <div>
+          <div class="card_details">
+            <h1>6577296777</h1>
+            <p>MoniePoint</p>
+            <p>Emmanuel Edward</p>
+          </div>
+
+        </div>
+        <div class="btn-payment">
+          <button id='btn' style="color: white;">
+            Confirm
+            <!-- <a href="mailto:paragonprimeinvestment@gmail.com">confirm</a> -->
+          </button>
+        </div>
+
       </div>
-       
-     </div>
-     <div class="btn-payment">
-        <button className="" onclick="">
-          <a href="mailto:paragonprimeinvestment@gmail.com">confirm</a>
-        </button>
-     </div>
-     
-   </div>
+    </div>
+
   </div>
 
- </div>
-
- {% endblock %}
- {% block footer %}
-    {% endblock %}
+  {% endblock %}
+  {% block footer %}
+  {% endblock %}
 </body>
 
 </html>

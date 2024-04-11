@@ -23,6 +23,10 @@ def investment(request):
     return render(request, 'investment.html')
 
 
+def about(request):
+    return render(request, 'about.html')
+
+
 def paystack(request):
     return render(request, 'payStack.html')
 

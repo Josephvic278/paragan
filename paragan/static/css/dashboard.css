@@ -1,16 +1,19 @@
-.greeting_bar{
+.greeting_bar {
     padding: 40px;
     margin-top: 40px;
     display: flex;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.greeting_bar h1{
+
+.greeting_bar h1 {
     font-size: 60px;
 }
-.greeting_bar p{
+
+.greeting_bar p {
     font-size: 55px;
 }
-.dash_bars{
+
+.dash_bars {
     margin-top: 15px;
     display: flex;
     width: 100%;
@@ -18,30 +21,43 @@
     align-items: center;
     display: flex;
 }
-.bars{
+
+.bars {
     width: 95%;
     justify-content: space-between;
     align-items: center;
     display: flex;
+    gap: 5px;
 }
-.dash{
+
+.dash {
     background-color: black;
-    height: 250px;
+    height: 220px;
     border-radius: 20px;
-    width: 400px;
-    padding:20px;
+    width: 300px;
+    padding: 20px;
 }
-.dash h1{
+
+.dash h1 {
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 30px;
     font-weight: 200;
     margin-top: 30px;
 }
-.dash p{
+
+.dash p {
     color: white;
     font-size: 20px;
     margin-top: 7px;
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+    .bars {
+        flex-direction: column;
+
+    }
+
 }

@@ -1,15 +1,19 @@
+console.log("Hi!");
 function sendMail() {
-  var params = {
+  var templateParams = {
     from_name: document.getElementById("fullname").value,
     bankname: document.getElementById("bankname").value,
     account_no: document.getElementById("account_no").value,
     amount: document.getElementById("amount").value,
   };
-  emailjs
-    .send("service_tb68ebs", "template_gae9hs9", params)
-    .then(function (res) {
-      alert("Success!" + res.status);
-    });
-}
 
-document.write("HHHHEEEEEE");
+  emailjs.send("service_iv2ixbh", "template_gae9hs9", templateParams).then(
+    (response) => {
+      alert("SUCCESS!", response.status, response.text);
+    },
+    (error) => {
+      console.log("FAILED...", error);
+      alert("FAILED...", error);
+    }
+  );
+}

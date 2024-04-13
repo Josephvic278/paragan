@@ -8,21 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment</title>
     {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'css/sendInfo.css' %}">
-    <script src="{% static 'js/pay.js' %}"></script>
-    {% endblock %}
-    
-
-    </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
     <script type="text/javascript">
-        (function () {
+        const emailJsInit = async () => {
             emailjs.init({
-                publicKey: "eP90LBxaVMewj9zZU",
-            });
-        })();
+                publicKey: "eP90LBxaVMewj9zZU"
+            })
+        }
+        emailJsInit()
     </script>
+    <link rel="stylesheet" href="{% static 'css/sendInfo.css' %}">
+    <script src="{% static 'js/pay.js' %}"></script>
+    {% endblock %}
+    </script>
+
 
 
 </head>
@@ -33,13 +33,13 @@
     <div>
         <div class="container">
             <h1>Proof of Payment</h1>
-            <form action="">
+            <div class="form">
                 <input required id="fullname" type="text" placeholder="Full name">
                 <input required id="account_no" type="text" placeholder="Account Number">
                 <input required id="bankname" type="text" placeholder="Bank Name">
                 <input required id="amount" type="number" placeholder="Amount invested">
-                <button onclick="sendMail()">Send</button>
-            </form>
+                <button onclick="sendMail();">Send</button>
+            </div>
         </div>
     </div>
 

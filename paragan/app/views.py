@@ -31,9 +31,5 @@ def paystack(request):
     return render(request, 'payStack.html')
 
 
-def sendinfo(request):
-    return render(request, 'sendinfo.html')
-
-
 def toHome(request):
     return render(request, 'toHome.html')

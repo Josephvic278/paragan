@@ -17,7 +17,7 @@
     padding: 0.75rem;
     border-radius: 0.5rem;
     margin: 1.5rem auto;
-    height: 280px;
+    height: auto;
     text-align: center;
     width: 90%;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -32,13 +32,35 @@
     margin-top: 15px;
 }
 
+.container {
+    display: grid;
+    place-content: center;
+    font-family: Verdana,
+        Geneva,
+        Tahoma,
+        sans-serif;
+}
+
+.none {
+    display: none;
+}
+
+input,
+button {
+    display: block;
+    padding: .5rem;
+    margin: 1rem 0;
+    font: inherit;
+}
+
 .btn-payment button {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 10px;
     height: 40px;
     border: none;
-    width: 50%;
+    width: 100%;
     border-radius: 9px;
+    color: white;
     font-weight: 600;
     background: black;
 }
@@ -46,6 +68,11 @@
 .btn-payment button a {
     text-decoration: none;
     color: white;
+}
+
+.form {
+    display: grid;
+    place-items: center;
 }
 
 footer {

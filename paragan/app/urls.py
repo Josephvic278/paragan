@@ -9,6 +9,5 @@ urlpatterns = [
     path('dashboard/', dashboard, name='dashbaord'),
     path('investment/', investment, name='investment'),
     path('paystack/', paystack, name='paystack'),
-    path('sendinfo/', sendinfo, name='sendinfo'),
     path('toHome/', toHome, name='tohome'),
 ]

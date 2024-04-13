@@ -8,9 +8,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Payment</title>
   {% block extra_css %}
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    const emailJsInit = async () => {
+      emailjs.init({
+        publicKey: "eP90LBxaVMewj9zZU"
+      })
+    }
+    emailJsInit()
+  </script>
   <link rel="stylesheet" href="{% static 'css/payStack.css' %}">
+  <script src="{% static 'js/pay.js' %}"></script>
   {% endblock %}
-  <!-- <script src="{% static 'js/payStack.js' %}"></script> -->
 
 </head>
 
@@ -29,15 +39,25 @@
             <p>MoniePoint</p>
             <p>Emmanuel Edward</p>
           </div>
-
-        </div>
-        <div class="btn-payment">
-          <button id='btn'>
-            <a href="{% url 'app:sendinfo' %}">Confirm</a>
-            <!-- <a href="mailto:paragonprimeinvestment@gmail.com">confirm</a> -->
-          </button>
         </div>
 
+        <div>
+          <div class="container" id="container" style="margin-top: 20px;">
+            <h1>Proof of Payment</h1>
+            <div class="form">
+              <input required id="fullname" type="text" placeholder="Full name">
+              <input required id="account_no" type="text" placeholder="Account Number">
+              <input required id="bankname" type="text" placeholder="Bank Name">
+              <input required id="amount" type="number" placeholder="Amount invested">
+              <div class="btn-payment">
+                <button id='btn' onclick="sendMail();">
+                  Confirm
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -46,13 +66,6 @@
   {% endblock %}
   {% block footer %}
   {% endblock %}
-  <script>
-    const btn = document.getElementById("btn");
-
-    btn.addEventListener("click", () => {
-      prompt("What is up?", "I dont know");
-    });
-  </script>
 </body>
 
 </html>

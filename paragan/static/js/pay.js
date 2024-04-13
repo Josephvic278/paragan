@@ -1,4 +1,3 @@
-console.log("Hi!");
 function sendMail() {
   var templateParams = {
     from_name: document.getElementById("fullname").value,

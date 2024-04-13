@@ -9,7 +9,7 @@ function sendMail() {
 
   emailjs.send("service_iv2ixbh", "template_gae9hs9", templateParams).then(
     (response) => {
-      alert("SUCCESS!", response.status, response.text);
+      alert("WE HAVE RECIEVED YOUR RESPONSE!", response.status, response.text);
     },
     (error) => {
       console.log("FAILED...", error);

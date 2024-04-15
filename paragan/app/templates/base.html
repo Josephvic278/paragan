@@ -12,15 +12,27 @@
 </head>
 
 <body>
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
     <div class="top_bar">
         <div class="nav_bar">
             <img src="{% static 'img/logo.png' %}" alt="">
         </div>
-        <div class="top_links">
-            <a href="{% url 'app:about' %}">About</a>
-            <a href="{% url 'app:dashbaord' %}">Dashboard</a>
-            <a href="{% url 'app:investment' %}">Investments</a>
-            <a href="{% url 'users:logout' %}">Logout</a>
+        <div class="dropdown">
+
+            <svg xmlns="http://www.w3.org/2000/svg" style="width: 3.5rem;" class="dropbtn" viewBox="0 0 448 512">
+                <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                    d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+            </svg>
+
+            <div class="top_links">
+                <a href="{% url 'app:about' %}">About</a>
+                <a href="{% url 'app:dashbaord' %}">Dashboard</a>
+                <a href="{% url 'app:investment' %}">Investments</a>
+                <a href="{% url 'users:logout' %}">Logout</a>
+            </div>
         </div>
     </div>
     {% block content %}

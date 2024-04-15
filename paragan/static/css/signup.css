@@ -3,6 +3,8 @@ body {
     margin: 0 auto;
     display: grid;
     place-items: center;
+    height: 75vh;
+    background-color: rgb(105, 105, 255);
 }
 
 button {
@@ -20,14 +22,13 @@ button {
     width: 100%;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
 }
 
 .second_container {
     padding: 10px;
-    height: 70%;
+    height: 100%;
     background: white;
-    width: 60%;
+    width: 80%;
     box-shadow: rgb(169, 172, 187);
     border-radius: 15px;
 }
@@ -35,7 +36,7 @@ button {
 .title_head {
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top: 50px;
+
     color: rgb(72, 92, 228);
 }
 
@@ -61,12 +62,11 @@ button {
 }
 
 .input_bars {
-    margin-top: 0px;
     padding: 20px;
 }
 
 .input_bars input {
-    margin-top: 50px;
+    margin-top: 1rem;
     border: none;
     width: 100%;
     outline: none;
@@ -107,4 +107,5 @@ button {
     margin-left: 10px;
     font-weight: 200;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }

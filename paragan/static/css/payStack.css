@@ -41,6 +41,15 @@
         sans-serif;
 }
 
+#btnBtn {
+    margin: 1rem auto;
+    color: black;
+    font-weight: bold;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
 .none {
     display: none;
 }
@@ -48,9 +57,11 @@
 input,
 button {
     display: block;
-    padding: .5rem;
+    padding: .75rem;
     margin: 1rem 0;
     font: inherit;
+    border-radius: 0.5rem;
+
 }
 
 .btn-payment button {

@@ -26,7 +26,7 @@ function sendMail() {
           response.text
         );
         hideLoading();
-        //window.location.href = `{% url 'app:dashbaord' %}`;
+        //window.location.href = ``;
       },
       (error) => {
         console.log("FAILED...", error);

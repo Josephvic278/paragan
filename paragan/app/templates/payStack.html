@@ -28,6 +28,12 @@
   {% block content %}
 
   <div>
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
+    <div class="button-container">
+      <button class="butt"> <a href="{% url 'app:dashbaord' %}">Return to DashBoard</a></button>
+    </div>
     <div class="card_bg">
       <div class="card-payment">
         <div class="card_title">
@@ -51,7 +57,7 @@
               <input required id="amount" type="number" placeholder="Amount invested">
               <div class="btn-payment">
                 <button id='btn' onclick="sendMail();">
-                  <a href="{% url 'app:dashbaord' %}">Confirm</a>
+                  Confirm
                 </button>
               </div>
             </div>

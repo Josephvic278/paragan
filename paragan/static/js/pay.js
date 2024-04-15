@@ -8,6 +8,17 @@ function hideLoading() {
   const loaderContainer = document.querySelector(".loader-container");
   loaderContainer.style.display = "none";
 }
+function showZoom() {
+  const buttonContainer = document.querySelector(".button-container");
+  buttonContainer.style.display = "block";
+}
+
+// Function to hide the loading indicator
+function hideZoom() {
+  const buttonContainer = document.querySelector(".button-container");
+  buttonContainer.style.display = "none";
+}
+
 function sendMail() {
   var templateParams = {
     to_name: document.getElementById("full_name").value,
@@ -15,7 +26,7 @@ function sendMail() {
     account_no: document.getElementById("account_no").value,
     amount: document.getElementById("amount").value,
   };
-
+  hideZoom();
   const response = emailjs
     .send("service_iv2ixbh", "template_gae9hs9", templateParams)
     .then(
@@ -26,7 +37,7 @@ function sendMail() {
           response.text
         );
         hideLoading();
-        //window.location.href = ``;
+        showZoom();
       },
       (error) => {
         console.log("FAILED...", error);

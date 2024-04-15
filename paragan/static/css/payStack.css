@@ -110,6 +110,50 @@ button {
     }
 }
 
+.button-container {
+    height: 50%;
+    width: 50%;
+    background-color: gray;
+    border-radius: 2rem;
+    padding: 1rem;
+    /* Styles for positioning the container (optional) */
+    display: grid;
+    place-content: center;
+    /* Initially hide the loader */
+    position: absolute;
+    /* Example positioning */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.butt {
+    background-color: black;
+    border: 8px solid #f3f3f3;
+    /* Border for the circle */
+    border-radius: 1rem;
+    padding: 1rem 2.5rem;
+    animation: zoom 1s linear;
+    /* Animation details */
+    display: grid;
+    place-content: center;
+}
+
+.butt a {
+    text-decoration: none;
+    color: white;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scaleZ(0)
+    }
+
+    100% {
+        transform: scaleZ(100);
+    }
+}
+
 footer {
     background-color: black;
     color: white;

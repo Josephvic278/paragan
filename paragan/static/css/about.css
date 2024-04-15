@@ -22,11 +22,21 @@
 .landing {
     position: relative;
     overflow: hidden;
-    background-size: cover;
-    background-repeat: no-repeat;
     padding: 0 3rem;
     text-align: center;
-    background-image: url('img/bg.jpg')
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .landing-next {
@@ -51,11 +61,13 @@
 .btn {
     border-radius: 0.25rem;
     font-weight: bold;
-    border: 2px solid black;
-    padding: 10px 60px 8px 60px;
+    background-color: white;
+    padding: 0.5rem 1rem;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: .75rem;
     transition: 0.3s ease-in-out;
+    border: none;
+    color: black;
 }
 
 .btn:hover {

@@ -15,19 +15,22 @@
 <body>
     {% block content %}
     <div class="about">
-        <div class="landing" style=" background-image: url('/paragan/static/img/bg.jpg');
-          height: 350px;">
+        <div class="landing" style="
+          height: 350px;"><img class="img" src="{% static 'img/bg.jpg' %}" alt="">
             <div class="landing-next" style="background-color: rgba(0, 0, 0, 0.6)">
                 <div class="landing-card">
                     <div class="text-white">
-                        <h2 style="margin-bottom: 1rem;font-size: 2rem;font-weight: bold;">
+                        <h2 style="margin-bottom: 1rem;font-size: 1.75rem;font-weight: bold;color: white;">
                             Paragon Prime Investment(PPI)
                         </h2>
-                        <h4 style="margin-bottom: 1.5rem;font-size: .75rem;font-weight:600;font-style: italic">Trading
+                        <h4
+                            style="margin-bottom: 1.5rem;font-size: .75rem;font-weight:600;color: white;font-style: italic">
+                            Trading
                             made easy</h4>
                         <Link to="/investments">
                         <button type="button" class="btn">
-                            Invest
+
+                            <a style="text-decoration: none;color: black" href="{% url 'app:investment' %}">Invest</a>
                         </button>
                         </Link>
                     </div>

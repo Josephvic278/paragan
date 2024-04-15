@@ -1,3 +1,7 @@
+body {
+    background-color: rgb(105, 105, 255);
+}
+
 .greeting_bar {
     padding: 40px;
     margin-top: 40px;

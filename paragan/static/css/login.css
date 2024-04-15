@@ -3,6 +3,8 @@ body {
     margin: 0 auto;
     display: grid;
     place-items: center;
+    height: 75vh;
+    background-color: rgb(105, 105, 255);
 }
 
 button {
@@ -14,81 +16,94 @@ button {
     font-weight: bold;
     margin: 1rem auto;
 }
-.container{
+
+.container {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
+
 }
-.second_container{
+
+.second_container {
     padding: 10px;
-    height: 70%;
+    height: 100%;
     background: white;
-    width: 60%;
+    width: 80%;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 15px;
 }
-.title_head{
+
+.title_head {
     text-align: center;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    margin-top: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
     color: rgb(72, 92, 228);
 }
-.p_logo_bg{
+
+.p_logo_bg {
     justify-content: center;
     display: flex;
     align-items: center;
 }
-.p_logo{
+
+.p_logo {
     width: 50px;
     height: 50px;
     border-radius: 5px;
     background: rgb(72, 92, 228);
     text-align: center;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     justify-content: center;
     align-items: center;
     display: flex;
-    font-size: 30PX;
+    font-size: 30px;
     font-weight: bolder;
     color: white;
 }
-.input_bars{
-    margin-top: 0px;
+
+.input_bars {
+
     padding: 20px;
 }
-.input_bars input{
-    margin-top: 50px;
+
+.input_bars input {
+    margin-top: 2rem;
     border: none;
     width: 100%;
     outline: none;
     height: 40px;
     border-bottom: 2px solid rgb(169, 172, 187);
 }
-.input_bars input::placeholder{
-    margin-bottom: 4px; 
+
+.input_bars input::placeholder {
+    margin-bottom: 4px;
     font-weight: 100;
     font-size: 15px;
 }
-.btn{
+
+.btn {
     padding: 20px;
 }
-.btn button{
+
+.btn button {
     height: 50px;
     background: rgb(72, 92, 228);
     border: none;
     font-size: 14px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.end_text{
+
+.end_text {
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.end_text a{
+
+.end_text a {
     color: rgb(72, 92, 228);
 }
-.error{
+
+.error {
     color: red;
     font-size: 14px;
     font-weight: 200;

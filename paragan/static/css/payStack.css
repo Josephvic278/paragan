@@ -110,18 +110,20 @@ button {
     }
 }
 
+.max-body {
+    height: 75vh;
+}
+
 .button-container {
-    height: 50%;
-    width: 50%;
-    background-color: gray;
-    border-radius: 2rem;
-    padding: 1rem;
-    /* Styles for positioning the container (optional) */
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
     display: grid;
     place-content: center;
     /* Initially hide the loader */
     position: absolute;
     /* Example positioning */
+    padding: 1rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

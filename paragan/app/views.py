@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from users.models import *
 from django.shortcuts import get_object_or_404
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -8,7 +9,7 @@ from django.shortcuts import get_object_or_404
 def home(request):
     return render(request, 'home.html')
 
-
+@login_required
 def dashboard(request):
     user_id = request.user.id
     user_data = None
@@ -18,7 +19,7 @@ def dashboard(request):
 
     return render(request, 'dashboard.html', {'user_data': user_data, 'user_info': user_info})
 
-
+@login_required
 def investment(request):
     return render(request, 'investment.html')
 
@@ -33,3 +34,7 @@ def paystack(request):
 
 def toHome(request):
     return render(request, 'toHome.html')
+
+@login_required
+def admin_panel(request):
+    return render(request, 'admin_panel.html',)

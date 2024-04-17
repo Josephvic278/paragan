@@ -89,14 +89,6 @@ body {
     font-weight: normal;
 }
 
-footer {
-    background-color: black;
-    color: white;
-    display: grid;
-    place-content: center;
-    padding: 1rem 0.75rem;
-}
-
 @media screen and (max-width: 1224px) {
     .container {
         grid-template-columns: 1fr 1fr 1fr;

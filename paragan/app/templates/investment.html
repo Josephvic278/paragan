@@ -9,7 +9,11 @@
     {% block extra_css %}
     <link rel="stylesheet" href="{% static 'css/investment.css' %}">
     {% endblock %}
-    <title>Document</title>
+    <title>
+        {% block title %}
+            Investment
+        {% endblock %}
+    </title>
 </head>
 
 <body>

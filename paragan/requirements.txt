@@ -3,6 +3,8 @@ certifi
 cloudinary
 distlib
 Django
+psycopg2
+dj_database_url
 django-cors-headers
 django-jazzmin
 djangorestframework

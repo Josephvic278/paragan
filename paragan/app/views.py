@@ -11,11 +11,8 @@ def home(request):
 
 @login_required
 def dashboard(request):
-    user_id = request.user.id
-    user_data = None
-    if User.is_authenticated:
-        user_data = get_object_or_404(User, id=user_id)
-        user_info = get_object_or_404(UserData, id=user_id)
+    user_info = request.user  # Get the current authenticated user
+    user_data = get_object_or_404(UserData, user=user_info)  # Retrieve UserData associated with the user
 
     return render(request, 'dashboard.html', {'user_data': user_data, 'user_info': user_info})
 

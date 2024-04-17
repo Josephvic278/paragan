@@ -29,11 +29,11 @@ def signup(request):
                 ).exists():
                     UserData.objects.create(user=user)
                 login(request, user)
-                return redirect('app:dashbaord')
+                return redirect('app:dashboard')
             else:
                 messages.error(request, 'Passwords are not thesame')
     if request.user.is_authenticated:
-        return redirect('app:dashbaord')
+        return redirect('app:dashboard')
         
     return render(request , 'signup.html',)
 
@@ -45,13 +45,13 @@ def signin(request):
 
         if user is not None:
             login(request, user)
-            return redirect('app:dashbaord')
+            return redirect('app:dashboard')
         else:
             messages.error(request, 'Invalid Credentials!!! try again')
             return redirect('users:signin')
         
     if request.user.is_authenticated:
-        return redirect('app:dashbaord')
+        return redirect('app:dashboard')
     
     return render(request, 'login.html')
 

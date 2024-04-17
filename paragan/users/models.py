@@ -6,7 +6,7 @@ from django.utils import timezone
 class User(AbstractUser):
     email = models.EmailField(unique=True, null=True, db_index=True)
     username = models.CharField(max_length=150, unique=True, null=True, db_index=True)
-    phone_number = models.IntegerField(null=False, unique=True, blank=False)
+    phone_number = models.BigIntegerField(null=False, unique=True, blank=False)
     is_active = models.BooleanField(default=False)
     is_staff = models.BooleanField(default=False)
     date_joined = models.DateTimeField(default=timezone.now)

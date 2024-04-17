@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -85,11 +86,9 @@ WSGI_APPLICATION = 'paragan.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+database_url = dj_database_url.parse("postgres://paragan_db_user:Nkfvhf6NdQ2klIo5FMlhQme1IWOTYevC@dpg-cofv0cuv3ddc739r58b0-a.oregon-postgres.render.com/paragan_db")
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': database_url
 }
 
 

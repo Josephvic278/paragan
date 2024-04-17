@@ -21,11 +21,11 @@ class User(AbstractUser):
 
 class UserData(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    user_balance = models.DecimalField(default=0.00, decimal_places=2, max_digits=50000)
+    user_balance = models.DecimalField(default=0.00, decimal_places=2, max_digits=6)
     user_status = models.CharField(null=True, max_length=5000)
     user_notification = models.CharField(null=True, max_length=3000)
     dedicated_virtual_account = models.CharField(null=True, blank=True, max_length = 100000)
-    ref_balance = models.DecimalField(default=0.00, decimal_places=2, max_digits=50000)
+    ref_balance = models.DecimalField(default=0.00, decimal_places=2, max_digits=6)
     admin = models.BooleanField(default=False)
     
     def __str__(self):

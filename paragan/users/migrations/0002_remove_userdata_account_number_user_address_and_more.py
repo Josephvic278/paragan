@@ -39,7 +39,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='userdata',
             name='ref_balance',
-            field=models.DecimalField(decimal_places=2, default=0.0, max_digits=50000),
+            field=models.DecimalField(decimal_places=2, default=0.0, max_digits=6),
         ),
         migrations.AddField(
             model_name='userdata',
@@ -49,7 +49,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='userdata',
             name='user_balance',
-            field=models.DecimalField(decimal_places=2, default=0.0, max_digits=50000),
+            field=models.DecimalField(decimal_places=2, default=0.0, max_digits=6),
         ),
         migrations.AddField(
             model_name='userdata',

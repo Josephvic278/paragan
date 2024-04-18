@@ -20,7 +20,7 @@
         <div class="second_container">
             <h1 class="title_head">Welcome</h1>
             <div class="p_logo_bg">
-                <div class="p_logo">P</div>
+                <img src="{% static 'img/logo.png' %}" alt="">
             </div>
             <form action="" method="post" id="form">
                 {% csrf_token %}
@@ -40,7 +40,7 @@
                 </div>
 
                 <div class="end_text">
-                    <p>Dont have an accout? Sign Up <a href="{% url 'users:signup' %}">Here</a></p>
+                    <p>Dont have an account? Sign Up <a href="{% url 'users:signup' %}">Here</a></p>
                 </div>
             </form>
         </div>

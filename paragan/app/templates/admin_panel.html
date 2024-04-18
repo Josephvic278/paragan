@@ -2,36 +2,79 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         {% block title %}
-            Admin
+        Admin
         {% endblock %}
     </title>
     {% block extra_css %}
-        <link rel="stylesheet" href="{% static 'css/admin_panel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/admin_panel.css' %}">
     {% endblock %}
 </head>
+
 <body>
     {% block content %}
-        <div class="main_container">
-            <div class="container">
-                <h3>
-                    Dashboard
-                </h3>
-                <div class="mini_con">
-                    <div class="user_con">
+    <div class="main_container">
+        <div class="container">
+            <h3>
+                Dashboard
+            </h3>
+            <div class="user_details_heading">
+                <p class="name">Username</p>
+                <p class="id">ID</p>
+                <p class="amt">Amount</p>
+                <p class="email">Email</p>
+                <p class="add">Add to User Bal</p>
+                <p class="remove_user">Remove User</p>
+            </div>
+            <div class="mini_con">
+                <div class="user_con">
+                    <div class="t_name_img">
                         <div class="user_details">
                             <img src="{% static 'img/np-p.png' %}" alt="">
                         </div>
+                        <p class="t_name">Joshuauka0</p>
                     </div>
+                    <p class="t_id">39479348</p>
+                    <p class="t_amt">10,000</p>
+                    <p class="t_email">joshuauka0@gmail.com</p>
+                    <button class="t_add">Add</button>
+                    <button class="t_remove_user">Remove</button>
+                </div>
+            </div>
+            <div class="mini_con">
+                <div class="user_con">
+                    <div class="t_name_img">
+                        <div class="user_details">
+                            <img src="{% static 'img/np-p.png' %}" alt="">
+                        </div>
+                        <p class="t_name">Joshuauka0</p>
+                    </div>
+                    <p class="t_id">39479348</p>
+                    <p class="t_amt">10,000</p>
+                    <p class="t_email">joshuauka0@gmail.com</p>
+                    <button class="t_add">Add</button>
+                    <button class="t_remove_user">Remove</button>
                 </div>
             </div>
         </div>
+        <div class="control_panel">
+            <div class="control_panel_details">
+                <img src="{% static 'img/np-p.png' %}" alt="">
+            </div>
+            <p>Joshuauka0</p>
+            <p>joshuauka0@gmail.com</p>
+            <button class="t_remove_user">Remove User</button>
+            <h3>Transactions</h3>
+        </div>
+    </div>
     {% endblock %}
     {% block footer %}
     {% endblock %}
 </body>
+
 </html>

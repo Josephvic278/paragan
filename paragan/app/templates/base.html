@@ -6,10 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-    {% block title %}
-    {% endblock %}  
+        {% block title %}
+        {% endblock %}
     </title>
-    
+
     <link rel="stylesheet" href="{% static 'css/app_base.css' %}">
     {% block extra_css %}
     {% endblock %}
@@ -33,7 +33,7 @@
                 <a href="{% url 'app:about' %}">About</a>
                 <a href="{% url 'app:dashboard' %}">Dashboard</a>
                 <a href="{% url 'app:investment' %}">Investments</a>
-                <a href="{% url 'app:admin' %}">Amin Panel</a>
+                <a href="{% url 'app:admin' %}">Admin Panel</a>
                 <a href="{% url 'users:logout' %}">Logout</a>
             </div>
         </div>

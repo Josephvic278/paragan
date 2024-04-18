@@ -1,35 +1,154 @@
-.main_container{
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Open Sans",
+        sans-serif;
+}
+
+.main_container {
     justify-content: center;
     display: flex;
     align-items: center;
     height: 100%;
     width: 100%;
 }
-.container{
+
+.container {
     background: #F6F7FB;
     height: 90%;
     width: 90%;
     border-radius: 15px;
+    padding: 0.5rem;
 }
-.container h3{
+
+.container h3 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 20px;
 }
-.mini_con{
+
+.mini_con {
     width: 100%;
     justify-content: center;
     align-items: center;
     display: flex;
+    margin-bottom: 1rem;
 }
-.user_con{
+
+.user_con {
     background-color: white;
     width: 95%;
     border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    place-items: center;
 }
-.user_details{
+
+.t_name_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.user_details {
     margin: 5px;
 }
-.user_details img{
+
+.user_details img {
     width: 34px;
     border-radius: 40px;
+}
+
+.user_details_heading {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    place-items: center;
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.user_details_heading .name {
+    column-span: 2;
+}
+
+.user_details_heading .id,
+.user_details_heading .amt,
+.user_details_heading .email,
+.user_details_heading .add,
+.user_details_heading .remove_user {
+    column-span: 1;
+
+}
+
+@media screen and (max-width: 768px) {
+    .user_details_heading {
+        grid-template-columns: 1fr;
+        place-items: start;
+        padding: 0.5rem;
+    }
+
+    .user_con {
+        grid-template-columns: 1fr;
+        place-items: start;
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    color: black;
+    font: inherit;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+button:hover {
+    transform: scaleZ(115);
+}
+
+.t_add {
+    background-color: rgb(119, 252, 119);
+}
+
+.t_remove_user {
+    background-color: rgb(252, 96, 96);
+}
+
+.control_panel {
+
+    position: absolute;
+    /* afa you can take it from here, i just hope i did the right thing sha. */
+    /* right: 0; */
+    right: -100000px;
+    top: 0;
+    width: 33%;
+    background-color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.control_panel p {
+    padding-bottom: 1rem;
+}
+
+.control_panel h3 {
+    padding: 1rem 0;
+}
+
+.control_panel_details img {
+    width: 125px;
+    border-radius: 100%;
+    margin-bottom: 1rem;
 }

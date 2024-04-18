@@ -10,5 +10,6 @@ urlpatterns = [
     path('investment/', investment, name='investment'),
     path('paystack/', paystack, name='paystack'),
     path('toHome/', toHome, name='tohome'),
-    path('admin_panel/', admin_panel, name='admin')
+    path('admin_panel/', admin_panel, name='admin'),
+    path('base/', base, name='base')
 ]

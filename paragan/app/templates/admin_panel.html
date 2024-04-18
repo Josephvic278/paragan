@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,8 +13,11 @@
         {% endblock %}
     </title>
     {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'css/admin_panel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/admin_panel.css' %}"> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'js/admin_panel.js' %}"></script>
     {% endblock %}
+   
 </head>
 
 <body>
@@ -31,38 +35,34 @@
                 <p class="add">Add to User Bal</p>
                 <p class="remove_user">Remove User</p>
             </div>
+            <input type="text" name="" id="amount_input">
             <div class="mini_con">
+                {% for user in users_info %}
                 <div class="user_con">
                     <div class="t_name_img">
                         <div class="user_details">
                             <img src="{% static 'img/np-p.png' %}" alt="">
                         </div>
-                        <p class="t_name">Joshuauka0</p>
+                        <p class="t_name">{{user.username}}</p>
                     </div>
-                    <p class="t_id">39479348</p>
-                    <p class="t_amt">10,000</p>
-                    <p class="t_email">joshuauka0@gmail.com</p>
-                    <button class="t_add">Add</button>
-                    <button class="t_remove_user">Remove</button>
+                    <p class="t_id">{{user.id}}</p>
+                    {% for get_userdata in users_data  %}
+                        {% if user.id == get_userdata.id %}
+                        <p class="t_amt">₦{{get_userdata.user_balance}}</p>
+                        {% endif %}
+                    {% endfor %}
+                    <p class="t_email">{{user.email}}</p>
+                    <button class="t_add" onclick="send_request('add_fund','{{user.id}}')">Add</button>
+                    <button class="t_remove_user" onclick="send_request('remove','{{user.id}}')">Remove</button>
+                    <button class="t_remove_user" onclick="send_request('add_admin','{{user.id}}')">Add Admin</button>
+                    {% csrf_token %}
                 </div>
-            </div>
-            <div class="mini_con">
-                <div class="user_con">
-                    <div class="t_name_img">
-                        <div class="user_details">
-                            <img src="{% static 'img/np-p.png' %}" alt="">
-                        </div>
-                        <p class="t_name">Joshuauka0</p>
-                    </div>
-                    <p class="t_id">39479348</p>
-                    <p class="t_amt">10,000</p>
-                    <p class="t_email">joshuauka0@gmail.com</p>
-                    <button class="t_add">Add</button>
-                    <button class="t_remove_user">Remove</button>
-                </div>
+                {% endfor %}
             </div>
         </div>
-        <div class="control_panel">
+    </div>
+    
+        <!-- <div class="control_panel">
             <div class="control_panel_details">
                 <img src="{% static 'img/np-p.png' %}" alt="">
             </div>
@@ -71,7 +71,7 @@
             <button class="t_remove_user">Remove User</button>
             <h3>Transactions</h3>
         </div>
-    </div>
+     -->
     {% endblock %}
     {% block footer %}
     {% endblock %}

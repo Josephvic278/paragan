@@ -33,7 +33,9 @@
                 <a href="{% url 'app:about' %}">About</a>
                 <a href="{% url 'app:dashboard' %}">Dashboard</a>
                 <a href="{% url 'app:investment' %}">Investments</a>
+                {% if user_data.admin == True%}
                 <a href="{% url 'app:admin' %}">Admin Panel</a>
+                {% endif %}
                 <a href="{% url 'users:logout' %}">Logout</a>
             </div>
         </div>

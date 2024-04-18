@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 body {
-    font-family: "Open Sans",
+    font-family: "Quicksand",
         sans-serif;
 }
 
@@ -17,7 +17,7 @@ body {
 }
 
 .card_title h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
     font-size: clamp(.75rem, 4vh, 1.25rem);
 }
 
@@ -33,7 +33,7 @@ body {
 
 .card_details {
     margin-top: 40px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
 
 .card_details p {
@@ -43,10 +43,7 @@ body {
 .container {
     display: grid;
     place-content: center;
-    font-family: Verdana,
-        Geneva,
-        Tahoma,
-        sans-serif;
+
 }
 
 #btnBtn {
@@ -73,7 +70,7 @@ button {
 }
 
 .btn-payment button {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
     margin-top: 10px;
     height: 40px;
     border: none;

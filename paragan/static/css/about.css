@@ -1,29 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 body {
-    font-family: "Open Sans",
-        sans-serif;
-}
-
-.about {
-    width: 100%;
-    font-family: Verdana,
-        Geneva,
-        Tahoma,
+    font-family: "Quicksand",
         sans-serif;
 }
 
 .card {
     display: grid;
     place-items: center;
-    height: 50vh;
+    height: auto;
+    padding: 1.5rem;
 }
 
-.title {
+.card h1 {
+    padding: .5rem 0;
     font-weight: bold;
     text-transform: capitalize;
-    font-size: 1.25rem;
-    padding: 0 0.75rem;
+    font-size: 1.5rem;
 }
 
 .landing {
@@ -63,6 +56,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .btn {

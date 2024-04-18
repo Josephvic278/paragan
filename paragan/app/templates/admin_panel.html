@@ -13,11 +13,11 @@
         {% endblock %}
     </title>
     {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'css/admin_panel.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/admin_panel.css' %}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{% static 'js/admin_panel.js' %}"></script>
     {% endblock %}
-   
+
 </head>
 
 <body>
@@ -35,7 +35,7 @@
                 <p class="add">Add to User Bal</p>
                 <p class="remove_user">Remove User</p>
             </div>
-            <input type="text" name="" id="amount_input">
+            <input class="input" type="text" name="" id="amount_input" placeholder="amount">
             <div class="mini_con">
                 {% for user in users_info %}
                 <div class="user_con">
@@ -47,9 +47,9 @@
                     </div>
                     <p class="t_id">{{user.id}}</p>
                     {% for get_userdata in users_data  %}
-                        {% if user.id == get_userdata.id %}
-                        <p class="t_amt">₦{{get_userdata.user_balance}}</p>
-                        {% endif %}
+                    {% if user.id == get_userdata.id %}
+                    <p class="t_amt">₦{{get_userdata.user_balance}}</p>
+                    {% endif %}
                     {% endfor %}
                     <p class="t_email">{{user.email}}</p>
                     <button class="t_add" onclick="send_request('add_fund','{{user.id}}')">Add</button>
@@ -61,8 +61,8 @@
             </div>
         </div>
     </div>
-    
-        <!-- <div class="control_panel">
+
+    <!-- <div class="control_panel">
             <div class="control_panel_details">
                 <img src="{% static 'img/np-p.png' %}" alt="">
             </div>

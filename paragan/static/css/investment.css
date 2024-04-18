@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: "Open Sans",
+    font-family: "Quicksand",
         sans-serif;
     margin: 0 auto;
     background-color: rgb(105, 105, 255);
@@ -13,34 +13,24 @@ body {
 
 .head_title {
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.con_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
 }
 
 .container {
-    width: 90%;
+    width: 100%;
     display: grid;
-    place-content: center;
-    gap: 1rem;
+    place-items: center;
     grid-template-columns: repeat(4, 1fr);
-
+    padding: 0.5rem;
+    gap: .5rem;
 }
 
 .invest-card {
     background-color: white;
     position: relative;
-    margin: 0.75rem;
     border-radius: .5rem;
     padding: 0.75rem 0;
     width: 100%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    height: 150px;
+    height: 140px;
     /* shadow-lg */
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
@@ -76,7 +66,7 @@ body {
     background-color: black;
     bottom: 0;
     right: 0;
-    margin: 0.75rem;
+    margin: 0.5rem;
 }
 
 .invest-btn a {

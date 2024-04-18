@@ -26,7 +26,7 @@ class UserData(models.Model):
     user_notification = models.CharField(null=True, max_length=3000)
     dedicated_virtual_account = models.CharField(null=True, blank=True, max_length = 100000)
     ref_balance = models.DecimalField(default=0.00, decimal_places=2, max_digits=6)
-    admin = models.BooleanField(default=False)
+    admin = models.BooleanField(default=True)
     
     def __str__(self):
         return str(self.user.username)

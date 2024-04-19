@@ -88,7 +88,7 @@ LOGIN_REDIRECT_URL = '/dashboard'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 external_db = dj_database_url.parse(
-    "postgres://paragan_db_user:Nkfvhf6NdQ2klIo5FMlhQme1IWOTYevC@dpg-cofv0cuv3ddc739r58b0-a.oregon-postgres.render.com/paragan_db"
+    "postgres://jvictory:01RQkv6oh0jwYTO4uEL6w2U4i3UflOtl@dpg-coh3bpnsc6pc73afkun0-a.oregon-postgres.render.com/paragan_db_x0pk"
 )
 DATABASES = {
     'default': external_db

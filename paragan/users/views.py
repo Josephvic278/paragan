@@ -28,8 +28,8 @@ def signup(request):
                     user=user
                 ).exists():
                     UserData.objects.create(user=user)
-                login(request, user)
-                return redirect('app:dashboard')
+                    login(request, user)
+                    return redirect('app:dashboard')
             else:
                 messages.error(request, 'Passwords are not thesame')
     if request.user.is_authenticated:

@@ -2,41 +2,49 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         {% block title %}
-            Dashboard
+        Dashboard
         {% endblock %}
     </title>
     {% block extra_css %}
     <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
     {% endblock %}
 </head>
+
 <body>
     {% block content %}
-        <div class="greeting_bar">
-            <h1>Hi, </h1><p>{{user.username}}</p>
-        </div>
-        <div class="dash_bars">
-            <div class="bars">
-                <div class="dash">
-                    <h1>Email Address</h1>
-                    <p>{{user.email}}</p>
-                </div>
+
+    <div class="greeting_bar">
+        <h1>Hi, </h1>
+        <p>{{user.username}}</p>
+    </div>
+    <div class="dash_bars">
+        <div class="bars">
+            <div class="dash">
+                <h1>Email Address</h1>
+
+            </div>
+            <p>{{user.email}}</p>
             <div class="dash">
                 <h1>Account Balance</h1>
-                <p>₦{{user_data.user_balance}}</p>
+
             </div>
+            <p>₦{{user_data.user_balance}}</p>
             <div class="dash">
                 <h1>Phone Number</h1>
-                <p>{{user.phone_number}}</p>
+
             </div>
-            </div>
+            <p>{{user.phone_number}}</p>
         </div>
+    </div>
     {% endblock %}
     {% block footer %}
     {% endblock %}
 </body>
+
 </html>

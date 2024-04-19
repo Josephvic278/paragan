@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
 
 * {
     padding: 0;
@@ -7,15 +8,16 @@
 }
 
 body {
-    font-family: "Open Sans",
+    font-family: "Quicksand",
         sans-serif;
+
 }
 
 .top_bar {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 1rem;
 }
 
 
@@ -23,13 +25,12 @@ body {
     width: 50px;
 }
 
-.top_links {}
 
 .top_links a {
     color: black;
     text-decoration: none;
     margin-left: 15px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
     font-weight: 500;
 }
 
@@ -54,10 +55,6 @@ body {
 }
 
 /* Add a red background color to navbar links on hover */
-.navbar a:hover,
-.dropdown:hover .dropbtn {
-    background-color: lightgreen;
-}
 
 /* Dropdown content (hidden by default) */
 .top_links {
@@ -67,7 +64,7 @@ body {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    margin-left: -100px;
+    margin-left: -80px;
 }
 
 /* Links inside the dropdown */
@@ -102,7 +99,7 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
 
 .footer p {

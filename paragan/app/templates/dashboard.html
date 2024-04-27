@@ -20,27 +20,19 @@
     {% block content %}
 
     <div class="greeting_bar">
-        <h1>Hi, </h1>
-        <p>{{user.username}}</p>
+        <h1>Hi, <span>
+                {{user.username}}
+            </span></h1>
+
     </div>
     <div class="dash_bars">
-        <div class="bars">
-            <div class="dash">
-                <h1>Email Address</h1>
 
-            </div>
-            <p>{{user.email}}</p>
-            <div class="dash">
-                <h1>Account Balance</h1>
+        <p class="amt">₦{{user_data.user_balance}}</p>
+        <h4>Phone:</h4>
+        <p>{{user.phone_number}}</p>
+        <h4>Email:</h4>
+        <p>{{user.email}}</p>
 
-            </div>
-            <p>₦{{user_data.user_balance}}</p>
-            <div class="dash">
-                <h1>Phone Number</h1>
-
-            </div>
-            <p>{{user.phone_number}}</p>
-        </div>
     </div>
     {% endblock %}
     {% block footer %}
